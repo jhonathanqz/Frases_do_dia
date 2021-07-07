@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-void main(){
+void main() {
   runApp(MaterialApp(
     home: Home(),
     debugShowCheckedModeBanner: false,
@@ -14,7 +14,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   var _frases = [
     "Sou apenas um pequeno planeta que se perde diariamente em todo o seu universo.",
     "Novas amizades serão sempre bem-vindas para darem cor e alegria ao meu dia a dia.",
@@ -24,64 +23,61 @@ class _HomeState extends State<Home> {
 
   var _fraseGerada = "Clique abaixo para gerar uma frase!";
 
-  void _gerarFrase(){
-
+  void _gerarFrase() {
     // 0, 1 , 2, 3
-    var numeroSorteado = Random().nextInt( _frases.length );
+    var numeroSorteado = Random().nextInt(_frases.length);
 
     setState(() {
-      _fraseGerada = _frases[ numeroSorteado ];
+      _fraseGerada = _frases[numeroSorteado];
     });
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Frases do dia"),
-        backgroundColor: Colors.green,
-      ),
-      body: SingleChildScrollView(
-        child: Center(
-        child: Container(
-          padding: EdgeInsets.all(16),
-          //width: double.infinity,
-          /*decoration: BoxDecoration(
+        appBar: AppBar(
+          title: Text("Frases do dia"),
+          backgroundColor: Colors.green,
+        ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(16),
+              //width: double.infinity,
+              /*decoration: BoxDecoration(
               border: Border.all(width: 3, color: Colors.amber)
           ),*/
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Image.asset("imagens/frase.png"),
-              Text(
-                _fraseGerada,
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                    fontSize: 25,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black
-                ),
-              ),
-              SizedBox(height: 20,),
-              RaisedButton(
-                child: Text(
-                  "Nova Frase",
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset("imagens/frase.png"),
+                  Text(
+                    _fraseGerada,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black),
                   ),
-                ),
-                color: Colors.green,
-                onPressed: _gerarFrase,
-              )
-            ],
+                  SizedBox(
+                    height: 20,
+                  ),
+                  RaisedButton(
+                    child: Text(
+                      "Nova Frase",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    color: Colors.green,
+                    onPressed: _gerarFrase,
+                  )
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
-      )
-    );
+        ));
   }
 }

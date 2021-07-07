@@ -1,16 +1,31 @@
-# frases_do_dia
+<br>
+<center>
+<p align="center">
+  <h1> Frases do Dia 💬 </h1>
+</p></center>
 
-A new Flutter application.
+## 👁‍🗨 Tecnologias
 
-## Getting Started
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-This project is a starting point for a Flutter application.
+- [Flutter](https://flutter.dev/)
+- [Dart](https://dart.dev/)
 
-A few resources to get you started if this is your first Flutter project:
+## 💻 Projeto
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+O projeto Frases do Dia, consiste em um aplicativo que mostra ao usuário final, frases aleatórias para iniciar seu dia. Este projeto "simples", foi feito apenas para testar e adquirir mais conhecimento com a função "Random", responsável por exibir as frases aleatóriamente na tela para o usuário.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Screenshots
+<div>
+  <img src="https://github.com/jhonathanqz/Frases_do_dia/blob/master/screenshots/home1.jpg" width="600px" style="max-width:100%;" alt="imagem do projeto">
+</div>
+
+## ▶️ Como executar
+
+- Clone o repositório
+- Abra o terminal no diretório do projeto e execute `flutter pub get`
+- Inicie seu app com `flutter run`
+
+---
+<br>
+Este projeto foi desenvolvido apenas para fins de agregar mais conhecimento.
